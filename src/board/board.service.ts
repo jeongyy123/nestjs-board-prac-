@@ -11,7 +11,7 @@ import { Repository } from 'typeorm';
 export class BoardService {
   constructor(
     @InjectRepository(Article) private articleRepository: Repository<Article>,
-  ) { }
+  ) {}
 
   async getArticles() {
     return await this.articleRepository.find({
